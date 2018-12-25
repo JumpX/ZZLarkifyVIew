@@ -1,0 +1,583 @@
+ [{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#b4a7d6",
+  "data": {
+    "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+    "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+    "price1": "99.0",
+    "price2": "199.0",
+    "price3": "299.0",
+    "price4": "399.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               },{
+               "x": "640",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "820",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#63b363",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "685",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "10",
+               "y": "200",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "20",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "200",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#9fc5e8",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#b4a7d6",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0",
+  "price3": "299.0",
+  "price4": "399.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               },{
+               "x": "640",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "820",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#63b363",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "685",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "10",
+               "y": "200",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "20",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "200",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#9fc5e8",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#b4a7d6",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0",
+  "price3": "299.0",
+  "price4": "399.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               },{
+               "x": "640",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "1",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "820",
+               "y": "350",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#63b363",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "685",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "10",
+               "y": "200",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "20",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "200",
+               "y": "50",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  },{
+  "width": "1125",
+  "height": "450",
+  "bgColor": "#9fc5e8",
+  "data": {
+  "image1":"http://tvax4.sinaimg.cn/crop.28.0.1544.1544.1024/6de5070aly8ff01x23fazj218g16wthf.jpg",
+  "text1":"ZZLarkifyView内可动态增加多个多种或同种元素，通过元素复用池进行复用和存储",
+  "price1": "99.0",
+  "price2": "199.0"
+  },
+  "elements": [{
+               "x": "10",
+               "y": "10",
+               "w": "430",
+               "h": "430",
+               "mainType": "1",
+               "subType": "1",
+               "key": "image1"
+               },{
+               "x": "440",
+               "y": "50",
+               "w": "670",
+               "h": "200",
+               "mainType": "2",
+               "subType": "1",
+               "size": "45",
+               "lineNum": "3",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "text1"
+               },{
+               "x": "440",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "1",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#9013fe",
+               "key": "price1"
+               },{
+               "x": "620",
+               "y": "290",
+               "w": "180",
+               "h": "60",
+               "mainType": "3",
+               "subType": "2",
+               "size": "48",
+               "bold": "0",
+               "align": "1",
+               "color": "#333333",
+               "key": "price2"
+               }]
+  }]
