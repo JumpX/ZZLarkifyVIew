@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @class ZZCellModel;
-@interface ZZTableViewCell : UITableViewCell
 
-- (void)bindData:(ZZCellModel *)model frame:(CGRect)frame;
+@protocol ZZCellProtocol <NSObject>
+
+- (void)bindCell:(ZZCellModel *)model;
+- (void)willDisplayCell;
+
+@end
+
+@interface ZZTableViewCell : UITableViewCell<ZZCellProtocol>
 
 @end

@@ -14,10 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZZLarkifyViewDataSource <NSObject>
 @required
-- (CGFloat)ratioForElementInLarkifyView:(ZZLarkifyView *)larkifyView;
+- (CGFloat)ratioForLarkifyView:(ZZLarkifyView *)larkifyView;
 - (NSUInteger)numberOfElementsInLarkifyView:(ZZLarkifyView *)larkifyView;
-- (ZZElementModel *)larkifyView:(ZZLarkifyView *)larkifyView modelForElementAtIndex:(NSUInteger)index;
-- (id)larkifyView:(ZZLarkifyView *)larkifyView valueForElementAtIndex:(NSUInteger)index;
+- (ZZElementView *)larkifyView:(ZZLarkifyView *)larkifyView elementAtIndex:(NSUInteger)index;
+
+@optional
+- (CGRect)larkifyView:(ZZLarkifyView *)larkifyView rectForElementAtIndex:(NSUInteger)index;
+- (void)larkifyView:(ZZLarkifyView *)larkifyView willDisplayElement:(ZZElementView *)element index:(NSUInteger)index;
 
 @end
 
@@ -36,10 +39,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak, nullable) id<ZZLarkifyViewDataSource>  dataSource;
 @property (nonatomic, weak, nullable) id<ZZLarkifyViewDelegate>    delegate;
 
-- (nullable ZZElementModel *)modelForElementAtIndex:(NSUInteger)index;
+// 复用元素
+- (ZZElementView *)dequeueElementForReuseID:(NSString *)reuseID;
+- (ZZElementView *)dequeueElementForReuseID:(NSString *)reuseID ID:(NSString *)ID;
 
+// 取元素
+- (ZZElementView *)elementAtIndex:(NSUInteger)index;
+
+// 重加载
 - (void)reloadData;
-- (void)reloadElement:(NSString *)mainType subType:(NSString *)subType;
+- (void)reloadElementAtIndex:(NSUInteger)index;
 
 @end
 

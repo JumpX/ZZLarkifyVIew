@@ -11,7 +11,7 @@
 #import "ZZCellModel.h"
 #import "ZZUtils.h"
 
-@interface ZZTableViewController ()
+@interface ZZTableViewController () <UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView             *tableView;
 @property (nonatomic, copy)   NSArray <ZZCellModel *> *cellList;
@@ -36,7 +36,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ZZCellModel *model = self.cellList[indexPath.row];
-    return [model cellHeight:indexPath.row];
+    return [model cellHeight];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -46,11 +46,18 @@
     if (!cell) {
         cell = [[ZZTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
-    
     ZZCellModel *model = self.cellList[indexPath.row];
-    CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH, [model cellHeight:indexPath.row]);
-    [cell bindData:model frame:frame];
+    if ([cell conformsToProtocol:@protocol(ZZCellProtocol)]) {
+        [(id<ZZCellProtocol>)cell bindCell:model];
+    }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell conformsToProtocol:@protocol(ZZCellProtocol)]) {
+        [(id<ZZCellProtocol>)cell willDisplayCell];
+    }
 }
 
 #pragma mark - datas
@@ -72,6 +79,8 @@
         _tableView.delegate = (id<UITableViewDelegate>)self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.allowsSelection = NO;
+        _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return _tableView;

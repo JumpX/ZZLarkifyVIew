@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54333E6921E7579F0086A240 /* ZZLarkifyPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 54333E6821E7579F0086A240 /* ZZLarkifyPool.m */; };
 		5446D37621CFDF590029D9D6 /* ZZMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5446D37521CFDF590029D9D6 /* ZZMainViewController.m */; };
 		548E015021CFD83800227D45 /* UIView+ZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E014921CFD83800227D45 /* UIView+ZZ.m */; };
 		548E015121CFD83800227D45 /* NSArray+ZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E014A21CFD83800227D45 /* NSArray+ZZ.m */; };
@@ -63,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54333E6721E7579F0086A240 /* ZZLarkifyPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZLarkifyPool.h; sourceTree = "<group>"; };
+		54333E6821E7579F0086A240 /* ZZLarkifyPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZLarkifyPool.m; sourceTree = "<group>"; };
 		5446D37321CFDB6F0029D9D6 /* SDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImage.h; sourceTree = "<group>"; };
 		5446D37421CFDF590029D9D6 /* ZZMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMainViewController.h; sourceTree = "<group>"; };
 		5446D37521CFDF590029D9D6 /* ZZMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMainViewController.m; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 				54F395F521CD32DF004EB68A /* ZZLarkify.h */,
 				54F395F721CD32DF004EB68A /* ZZLarkifyView.h */,
 				54F395F221CD32DE004EB68A /* ZZLarkifyView.m */,
+				54333E6721E7579F0086A240 /* ZZLarkifyPool.h */,
+				54333E6821E7579F0086A240 /* ZZLarkifyPool.m */,
 				54F395F321CD32DF004EB68A /* ZZElementView.h */,
 				54F395F421CD32DF004EB68A /* ZZElementView.m */,
 				54F395F121CD32DE004EB68A /* ZZElementModel.h */,
@@ -485,6 +490,7 @@
 				548E01A521CFD99100227D45 /* NSButton+WebCache.m in Sources */,
 				548E01A421CFD99100227D45 /* SDWebImageCoder.m in Sources */,
 				548E019821CFD99100227D45 /* SDWebImageManager.m in Sources */,
+				54333E6921E7579F0086A240 /* ZZLarkifyPool.m in Sources */,
 				548E01B221CFD99100227D45 /* UIButton+WebCache.m in Sources */,
 				54F395D921CD2CE8004EB68A /* ZZTableViewController.m in Sources */,
 				548E01A621CFD99100227D45 /* SDAnimatedImageRep.m in Sources */,

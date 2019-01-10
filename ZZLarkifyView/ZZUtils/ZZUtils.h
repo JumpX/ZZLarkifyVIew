@@ -31,7 +31,7 @@
 #define zz_dispatch_main_async_safe(block) zz_dispatch_queue_async_safe(dispatch_get_main_queue(), block)
 #endif
 
-static force_inline NSString *trim(NSString *string)
+static force_inline NSString *ZZTrim(NSString *string)
 {
     if (string == nil) return @"";
     if (![string isKindOfClass:[NSString class]]) {
@@ -43,7 +43,7 @@ static force_inline NSString *trim(NSString *string)
     return bStr;
 }
 
-static force_inline BOOL ValidString(NSString *string)
+static force_inline BOOL ZZValidString(NSString *string)
 {
     BOOL result = NO;
     if (string && [string isKindOfClass:[NSString class]] && [string length]) {
@@ -52,7 +52,7 @@ static force_inline BOOL ValidString(NSString *string)
     return result;
 }
 
-static force_inline BOOL ValidArray(NSArray *array)
+static force_inline BOOL ZZValidArray(NSArray *array)
 {
     BOOL result = NO;
     if (array && [array isKindOfClass:[NSArray class]] && [array count]) {
@@ -61,7 +61,7 @@ static force_inline BOOL ValidArray(NSArray *array)
     return result;
 }
 
-static force_inline BOOL ValidDictionary(NSDictionary *dictionary)
+static force_inline BOOL ZZValidDictionary(NSDictionary *dictionary)
 {
     BOOL result = NO;
     if (dictionary && [dictionary isKindOfClass:[NSDictionary class]]) {
@@ -70,13 +70,13 @@ static force_inline BOOL ValidDictionary(NSDictionary *dictionary)
     return result;
 }
 
-static force_inline BOOL ValidSet(id set)
+static force_inline BOOL ZZValidSet(id set)
 {
     if (set && [set isKindOfClass:[NSDictionary class]]) {
         return YES;
     } else if (set && [set isKindOfClass:[NSArray class]] && [(NSArray*)set count] > 0 ) {
         return YES;
-    } else if (set && [set isKindOfClass:[NSString class]] && ![trim(set) isEqualToString:@""]) {
+    } else if (set && [set isKindOfClass:[NSString class]] && ![ZZTrim(set) isEqualToString:@""]) {
         return YES;
     }
     else {

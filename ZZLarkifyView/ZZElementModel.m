@@ -38,7 +38,7 @@
 
 - (BOOL)isTypesValid:(NSString *)mainType subType:(NSString *)subType
 {
-    return ValidString(mainType) && ValidString(subType);
+    return ZZValidString(mainType) && ZZValidString(subType);
 }
 
 - (BOOL)isTypesValid
@@ -48,10 +48,10 @@
 
 - (BOOL)isIDsValid:(NSInteger)index
 {
-    if (!ValidString(_reuseID)) {
-        _reuseID = ZZReuseID(_mainType, _subType);
+    if (!ZZValidString(_reuseID)) {
+        _reuseID = ZZCreateReuseID(_mainType, _subType);
     }
-    if (!ValidString(_ID)) {
+    if (!ZZValidString(_ID)) {
         _ID = [NSString stringWithFormat:@"%zd", index];
     }
     return YES;
@@ -73,11 +73,6 @@
     }
 }
 
-static force_inline CGFloat outFloat(CGFloat inFloat, CGFloat ratio)
-{
-    return inFloat*ratio;
-}
-
 @end
 
 #pragma mark - ZZElementClassInfo
@@ -86,7 +81,7 @@ static force_inline CGFloat outFloat(CGFloat inFloat, CGFloat ratio)
 
 + (instancetype)classInfoWithMainType:(NSString *)mainType subType:(NSString *)subType
 {
-    if (!ValidString(mainType) || !ValidString(subType)) return nil;
+    if (!ZZValidString(mainType) || !ZZValidString(subType)) return nil;
     
     ZZElementType mainEType = ([mainType integerValue] & ZZElementTypeMask);
     ZZElementType subEType = ZZElementTypeUnknown;

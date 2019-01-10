@@ -208,6 +208,15 @@ static const int IDKey;
     objc_setAssociatedObject(self, &IDKey, ID, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
+- (instancetype)initWithReuseID:(NSString *)reuseID ID:(NSString *)ID
+{
+    if (self = [super init]) {
+        self.reuseID = reuseID;
+        self.ID = ID;
+    }
+    return self;
+}
+
 @end
 
 @implementation ZZTapGestureRecognizer

@@ -24,7 +24,6 @@
 @property (nonatomic, copy) NSString *color;        ///< 字体颜色
 @property (nonatomic, copy) NSString *key;          ///< key
 
-
 #pragma mark - 自定义字段
 
 @property (nonatomic, copy, readonly)   NSString *ID;        ///< 唯一ID
@@ -37,7 +36,6 @@
 #pragma mark - 自定义方法
 
 - (BOOL)isModelValid:(CGFloat)ratio index:(NSInteger)index;
-- (BOOL)isTypesEqual:(NSString *)mainType subType:(NSString *)subType;
 - (void)updateClassInfo:(ZZElementClassInfo *)classInfo;
 
 @end

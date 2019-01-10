@@ -10,14 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ZZElementDataSource <NSObject>
-@required
-
+@protocol ZZElementProtocol <NSObject>
 /**
  *  绘制元素
  *
  *  @param model                元素配置
- *  @param value                元素Value
+ *  @param value                元素展示
  *  @param type                 元素子类型
  */
 - (void)bindElement:(ZZElementModel *)model
@@ -26,8 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@interface ZZElementView : UIView
+@interface ZZElementView : UIView <ZZElementProtocol>
 
 /**
  *  清除tapGesture
@@ -49,16 +46,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return BOOL
  */
 - (BOOL)shouldFront;
-/**
- *  绘制元素
- *
- *  @param model                元素配置
- *  @param value                元素Value
- *  @param type                 元素子类型
- */
-- (void)bindElement:(ZZElementModel *)model
-              value:(id)value
-               type:(ZZElementType)type;
 
 #pragma mark - 元素细节方法
 
@@ -172,6 +159,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy)     NSString    *ID;           ///< 唯一ID
 @property (nonatomic, copy)     NSString    *reuseID;      ///< 复用ID
+
+- (instancetype)initWithReuseID:(NSString *)reuseID ID:(NSString *)ID;
 
 @end
 

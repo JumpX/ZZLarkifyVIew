@@ -64,8 +64,14 @@ typedef NS_ENUM(NSInteger, ZZTextVerticalAlignment) {
 // 分隔符
 static NSString * const ZZDelimiter = @"#*$#";
 
+// 元素ID
+static force_inline NSString *ZZCreateID(NSUInteger index)
+{
+    return [NSString stringWithFormat:@"%zd",index];
+}
+
 // 元素复用ID
-static force_inline NSString *ZZReuseID(NSString *mainType, NSString *subType)
+static force_inline NSString *ZZCreateReuseID(NSString *mainType, NSString *subType)
 {
     return [NSString stringWithFormat:@"%@%@%@",mainType,ZZDelimiter,subType];
 }
@@ -93,7 +99,11 @@ static force_inline ZZElementType ZZSubEType(NSString *subType, ZZElementType su
 }
 
 #pragma mark -------------- 元素public方法 --------------
-
+// 比例值
+static force_inline CGFloat outFloat(CGFloat inFloat, CGFloat ratio)
+{
+    return inFloat*ratio;
+}
 // 文本行数
 static force_inline NSInteger ZZElementNumLine(NSString *numline, NSUInteger maxNum, NSUInteger defaultNum)
 {
@@ -150,7 +160,7 @@ static force_inline UIColor *zzElementBackgdColor(NSString *backgdColor, NSStrin
 // 价格拼接：￥88.8
 static force_inline NSString *ZZElementPrice(NSString *price)
 {
-    if (ValidString(price)) {
+    if (ZZValidString(price)) {
         return [NSString stringWithFormat:@"￥%@",price];
     } else {
         return @"";

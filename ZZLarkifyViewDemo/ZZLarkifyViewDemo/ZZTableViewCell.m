@@ -22,6 +22,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.contentView.backgroundColor = [UIColor colorWithHex:@"#0000ff"];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.larkifyView = ({
             ZZLarkifyView *larkifyView = [ZZLarkifyView new];
@@ -34,36 +35,61 @@
     return self;
 }
 
-- (void)bindData:(ZZCellModel *)cellModel frame:(CGRect)frame
+#pragma mark - ZZCellProtocol
+
+- (void)bindCell:(ZZCellModel *)cellModel
 {
     if (!cellModel || ![cellModel isKindOfClass:[ZZCellModel class]]) return;
-    
     self.cellModel = cellModel;
-    self.backgroundColor = [UIColor colorWithHex:cellModel.bgColor];
-    self.larkifyView.frame = frame;
+    self.larkifyView.backgroundColor = [UIColor colorWithHex:cellModel.bgColor];
+    self.larkifyView.frame = [cellModel larkifyViewFrame];
+}
+
+- (void)willDisplayCell
+{
     [self.larkifyView reloadData];
 }
 
-- (CGFloat)ratioForElementInLarkifyView:(ZZLarkifyView *)larkifyView
-{
-    return self.larkifyView.width/self.cellModel.width.floatValue;
-}
+#pragma mark - larkifyView
+#pragma mark - larkifyViewDataSource
 
-- (ZZElementModel *)larkifyView:(ZZLarkifyView *)larkifyView modelForElementAtIndex:(NSUInteger)index
+- (CGFloat)ratioForLarkifyView:(ZZLarkifyView *)larkifyView
 {
-    return self.cellModel.elements[index];
-}
-
-- (id)larkifyView:(ZZLarkifyView *)larkifyView valueForElementAtIndex:(NSUInteger)index
-{
-    ZZElementModel *model = [larkifyView modelForElementAtIndex:index];
-    return self.cellModel.data[model.key];
+    return [self.cellModel cellRatio];
 }
 
 - (NSUInteger)numberOfElementsInLarkifyView:(ZZLarkifyView *)larkifyView
 {
     return self.cellModel.elements.count;
 }
+
+- (CGRect)larkifyView:(ZZLarkifyView *)larkifyView rectForElementAtIndex:(NSUInteger)index
+{
+    ZZElementModel *model = self.cellModel.elements[index];
+    CGFloat ratio = [self ratioForLarkifyView:larkifyView];
+    if (![model isModelValid:ratio index:index]) return CGRectZero;
+    return model.rect;
+}
+
+- (ZZElementView *)larkifyView:(ZZLarkifyView *)larkifyView elementAtIndex:(NSUInteger)index
+{
+    ZZElementModel *model = self.cellModel.elements[index];
+    NSString *ID = ZZCreateID(index);
+    NSString *reuseID = ZZCreateReuseID(model.mainType, model.subType);
+    ZZElementView *element = [larkifyView dequeueElementForReuseID:reuseID ID:ID];
+    if (!element) {
+        element = [[model.classInfo.elementClass alloc] initWithReuseID:reuseID ID:ID];
+    }
+    return element;
+}
+
+- (void)larkifyView:(ZZLarkifyView *)larkifyView willDisplayElement:(ZZElementView *)element index:(NSUInteger)index
+{
+    ZZElementModel *model = self.cellModel.elements[index];
+    [(id<ZZElementProtocol>)element bindElement:model value:self.cellModel.data[model.key] type:model.eType];
+}
+
+#pragma mark - larkifyViewDelegate
 
 - (void)didClickLarkifyView:(ZZLarkifyView *)larkifyView
 {
@@ -72,19 +98,17 @@
 
 - (BOOL)larkifyView:(ZZLarkifyView *)larkifyView canClickElementAtIndex:(NSUInteger)index
 {
-    ZZElementModel *model = [larkifyView modelForElementAtIndex:index];
-    if (model.eType == ZZElementTypeButtonNormal) {
+    ZZElementModel *model = self.cellModel.elements[index];
+    if (model.classInfo.subEType == ZZElementTypeButtonNormal) {
         return YES;
+    } else {
+        return NO;
     }
-    return NO;
 }
 
 - (void)larkifyView:(ZZLarkifyView *)larkifyView didClickElementAtIndex:(NSUInteger)index
 {
-    ZZElementModel *model = [larkifyView modelForElementAtIndex:index];
-    if (model.eType == ZZElementTypeButtonNormal) {
-        NSLog(@">>>> click elementView");
-    }
+    NSLog(@">>>> click element");
 }
 
 @end
